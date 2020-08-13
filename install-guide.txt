@@ -1,0 +1,32 @@
+//*======== ENG =======
+
+
+Before using this app...
+
+1. We use ORM Red Bean PHP. 
+    Download file "rb.php" from official web-site and save with path: "../sever/lib/rb.php"
+2. IE isn't friendly to ES6+, witch we love. Use Mozilla/Chrome or another V8-browser
+
+3. Create a new file, named 'connect.php' into '/server/config/...' and write Red Bean connection
+
+f.e.: R::setup( 'mysql:host=127.0.0.1;dbname=DB_NAME',
+'USER_NAME', 'USER_PASSWORD' );
+
+4. Do import 'linker.sql' into MySQL 
+
+//*======== RUS =======
+
+Перед использованием этого приложения:
+
+1. Здесь используется ORM-библиотека Red Bean PHP.
+    Скачайте файл "rb.php" с официального сайта библиотеки и сохраните в директорию проекта, так чтобы путь до файла выглядел следующим образом "../sever/lib/rb.php"
+
+2. Бразуер IE не поддерживает стандарт ES6+, который использован здесь. Запускайте приложение в браузерах Мозила, Хром или ином, поддерживающием современный Javascript.
+
+3. Создайте файл "connect.php" в директории /server/config/.. и установите соедниение с базой данных через функцию Red Bean.
+    Например: R::setup( 'mysql:host=127.0.0.1;dbname=DB_NAME',
+'USER_NAME', 'USER_PASSWORD' );
+
+Замените эти константы на подходящие данные вашей СУБД
+
+4. Выполните импорт файла linker.sql для создания таблиц в MySQL

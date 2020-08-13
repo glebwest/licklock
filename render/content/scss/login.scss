@@ -1,0 +1,12 @@
+.logIn {
+    min-height: 45vh;
+    .block {
+        display: none;
+        &.active {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;    
+        }
+    }
+}

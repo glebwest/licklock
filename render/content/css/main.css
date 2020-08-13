@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.content {
+  min-height: 100vh;
+  background-image: -webkit-linear-gradient(195deg, #009acc, #363795);
+  background-image: -o-linear-gradient(195deg, #009acc, #363795);
+  background-image: linear-gradient(-105deg, #009acc, #363795);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.errorExplain, .thanksRecomend {
+  font-size: 17px;
+  color: #ffffff;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 20vh;
+}
+
+form .errMess {
+  font-size: 19px;
+  color: red;
+  text-align: center;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 600px;
+  background: none;
+  border: none;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  display: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.active {
+  display: block;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  font-size: 30px;
+  color: #ffffff;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff36;
+  -webkit-transition: border-color .2s ease-in-out;
+  -o-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  border-bottom-color: #fff;
+}
+
+input[type=text].error, input[type=password].error, input[type=email].error {
+  border-bottom: 3px solid red;
+}
+
+::-webkit-input-placeholder {
+  color: #ffffff36;
+}
+
+:-ms-input-placeholder {
+  color: #ffffff36;
+}
+
+::-ms-input-placeholder {
+  color: #ffffff36;
+}
+
+::placeholder {
+  color: #ffffff36;
+}
+
+input[type=button] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 23px;
+  color: #ffd900;
+  -webkit-transition: background .2s ease-in-out;
+  -o-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff36;
+  -webkit-transition: border-color .2s ease-in-out;
+  -o-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+input[type=button]:hover {
+  border-bottom-color: #fff;
+}
+
+header {
+  position: fixed;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+header .menu .menu-el {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffffff;
+  padding: 0 10px;
+  margin: 0 10px;
+  font-size: 21px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff36;
+  -webkit-transition: border-color .2s ease-in-out;
+  -o-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+header .menu .menu-el:hover {
+  border-bottom-color: #fff;
+}
+
+header .burger {
+  display: none;
+}
+
+header .login {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+}
+
+header .login .login-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .login.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .login.active::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  cursor: pointer;
+}
+
+header .login p {
+  color: #c8e2e6;
+  font-size: 19px;
+  margin-right: 20px;
+  border-bottom: 2px dashed #ffffff00;
+  padding: 3px 0;
+  -webkit-transition: border-bottom .2s ease-in-out;
+  -o-transition: border-bottom .2s ease-in-out;
+  transition: border-bottom .2s ease-in-out;
+}
+
+header .login:hover p {
+  border-bottom: 2px dashed #c8e2e6;
+}
+
+header .login object {
+  height: 30px;
+  width: 30px;
+}
+
+.knowThis {
+  display: none;
+}
+
+.knowThis.active {
+  display: block;
+  font-size: 19px;
+  text-align: center;
+  color: #fff;
+}
+
+.knowThis.active a {
+  color: #ffd900;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 750px;
+  }
+  header .menu {
+    display: none;
+  }
+  header .menu.open {
+    z-index: 99;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: teal;
+  }
+  header .menu.open .menu-el {
+    margin: 15px 0;
+    font-size: 23px;
+  }
+  header .burger {
+    z-index: 100;
+    width: 40px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .burger .line {
+    border-radius: 3px;
+    width: 40px;
+    height: 4px;
+    background: #c8e2e6;
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: -webkit-transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  }
+  header .burger.open {
+    position: relative;
+  }
+  header .burger.open .line {
+    position: absolute;
+    top: 13px;
+  }
+  header .burger.open .line:nth-child(1) {
+    display: none;
+  }
+  header .burger.open .line:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .burger.open .line:nth-child(3) {
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: 100vw;
+  }
+  input {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.spin {
+  display: none;
+}
+
+.spin.active {
+  position: relative;
+  min-height: 100px;
+  width: 100%;
+  display: block;
+}
+
+.spinner {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+
+.spinner .path {
+  stroke: #ffd000;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

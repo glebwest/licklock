@@ -1,0 +1,13 @@
+DirectoryIndex index.php
+
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+RewriteRule ^/.htaccess$ - [G]
+
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9]+)$ index.php?link=$1 [L]
+RewriteRule ^([A-Za-z0-9]+)/([0-9]+)$ index.php?link=$1&id=$2 [L]

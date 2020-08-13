@@ -1,0 +1,334 @@
+// главный файл стилей с обнулениями 
+// и стилями основных компонентов
+
+
+body {
+    margin: 0;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    min-height: 100vh;
+    background-image: linear-gradient(-105deg, #009acc, #363795);
+    z-index: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.errorExplain, .thanksRecomend {
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 20vh;
+    .errMess {
+    font-size: 19px;
+    color: red;
+    text-align: center;
+    }
+}
+
+input {
+    box-sizing: border-box;
+    width: 600px;
+    background: none;
+    border: none;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    display: none;
+    &:focus {
+        outline: none;
+    }
+    &.active {
+        display: block;
+    }
+}
+
+input[type=text], input[type=password], input[type=email] {
+    font-size: 30px;
+    color: #ffffff;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff36;
+    transition: border-color .2s ease-in-out;
+    &:focus {
+        border-bottom-color: #fff;
+    }
+    &.error {
+        border-bottom: 3px solid red;
+    }
+}
+
+::placeholder {
+    color: #ffffff36;
+}
+
+input[type=button] {
+    width: fit-content;
+    min-width: 300px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 23px;
+    color: rgb(255, 217, 0);
+    transition: background .2s ease-in-out;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff36;
+    transition: border-color .2s ease-in-out;
+    &:hover {
+        border-bottom-color: #fff;
+    }
+}
+
+header {
+    position: fixed;
+    box-sizing: content-box;
+    padding: 0 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 100;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        .menu-el {
+            display: block;
+            width: fit-content;
+            color: #ffffff;
+            padding: 0 10px;
+            margin: 0 10px;
+            font-size: 21px;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: #ffffff36;
+            transition: border-color .2s ease-in-out;
+            &:hover {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+    .burger {
+        display: none;
+    }
+    .login {
+        display: none;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        .login-list {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        &.active {
+            display: flex;
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                cursor: pointer;
+            }    
+        }
+        p {
+            color: #c8e2e6;
+            font-size: 19px;
+            margin-right: 20px;
+            border-bottom: 2px dashed #ffffff00;
+            padding: 3px 0;
+            transition: border-bottom .2s ease-in-out;
+        }
+        &:hover {
+            p {
+                border-bottom: 2px dashed #c8e2e6;
+            }
+        }
+        object {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+.knowThis {
+    display: none;
+    &.active {
+        display: block;
+        font-size: 19px;
+        text-align: center;
+        color: #fff;
+        a {
+            color: rgb(255, 217, 0);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        width: 750px;
+    }
+    header {
+        .menu {
+            display: none;
+            &.open {
+                z-index: 99;
+                position: fixed;
+                top: 0px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                background: teal;
+                .menu-el {
+                    margin: 15px 0;
+                    font-size: 23px;
+                }
+            } // здесь будет мобильная версия меню
+        }
+        .burger {
+            z-index: 100;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            .line {
+                border-radius: 3px;
+                width: 40px;
+                height: 4px;
+                background: #c8e2e6;
+                transition: transform .2s ease-in-out;
+            }
+            &.open {
+                position: relative;
+                .line {
+                    position: absolute;
+                    top: 13px;
+                }
+                .line:nth-child(1) {
+                    display: none;
+                }
+                .line:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                .line:nth-child(3) {
+                    transform: rotate(135deg);
+                }
+            }
+        }    
+    }    
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: 100vw;
+    }
+    input {
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+.spin {
+    display: none;
+    &.active {
+        position: relative;
+        min-height: 100px;
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+    
+    & .path {
+      stroke: rgb(255, 208, 0);
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+    
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
